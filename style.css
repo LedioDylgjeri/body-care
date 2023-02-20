@@ -290,13 +290,13 @@ body{
   width: 90%;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 10%;
 }
 
 .grid-parent > .div1-img {
   width: 100%;
-  height: 25rem;
+  height: 23rem;
   background-image: linear-gradient(40deg, rgba(244, 233, 132, 0.238),
   rgba(199, 92, 238, 0.308)), url(./images/intro_img1.jpg);
   background-position: 50% 50%;
@@ -318,7 +318,7 @@ body{
 .grid-parent > .div2-text {
   background: linear-gradient(40deg, #ed6ce46f, #f7f75a88);
   width: 100%;
-  height: 25rem;
+  height: 23rem;
   border: 2px solid rgba(218, 76, 243, 0.402);
   color: rgb(109, 122, 26);
 }
@@ -337,6 +337,12 @@ body{
   border-bottom: 2px solid rgb(109, 122, 26);
   padding-bottom: 1rem;
   margin-top: 10%;
+}
+
+@media screen and (max-width: 850px) {
+  .lotion-title {
+    margin-top: 10rem;
+  }
 }
 
 .lotion-title-text {
@@ -372,4 +378,25 @@ body{
 
 .item > span, a {
   margin-bottom: 5%;
+}
+
+.item > a {
+  background-color: black;
+  width: 75%;
+  margin-left: 12%;
+  padding: 1rem 0;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 0 rgba(250, 247, 247, 0.626);
+}
+
+.item > a:hover {
+  background-color: orange;
+  color: black;
+  transition: ease-in-out .3s;
+  box-shadow: 0 0 3px 3px rgb(239, 97, 46);
+  font-weight: bolder;
 }
