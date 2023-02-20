@@ -1,5 +1,6 @@
 body{
-  background-color: silver;
+  background: rgba(161, 161, 162, 0.44);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .header {
@@ -49,7 +50,6 @@ body{
 .title h1 {
   font-size: 4rem;
   color: rgb(109, 122, 26);
-  transform: translateY(100%);
   animation: h1;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -57,7 +57,7 @@ body{
 }
 
 .title h4 {
-  margin-top: -25px;
+  margin-top: -3rem;
   animation: h4;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -69,10 +69,10 @@ body{
     transform: translateY(0);
   }
   33% {
-    transform: translateY(100%);
+    transform: translateY(30%);
   }
   66% {
-    transform: translateY(-50%);
+    transform: translateY(-350%);
   }
   100% {
     transform: translateY(0%);
@@ -85,11 +85,11 @@ body{
   }
 
   33% {
-    transform: translateY(150%);
+    transform: translateY(0%);
   }
 
   66% {
-    transform: translateY(-50%);
+    transform: translateY(-550%);
   }
 
   100% {
@@ -103,8 +103,8 @@ body{
         transform: translateY(0);
       }
   
-      33% {
-        transform: translateY(35%);
+      23% {
+        transform: translateY(255%);
       }
   
       66% {
@@ -115,17 +115,26 @@ body{
         transform: translateY(0%);
       }
     }
+
+  .title > h1 {
+    font-size: 3rem;
+  }
+
+  .title > h4 {
+    margin-top: -2rem;
+  }
+
   @keyframes h4 {
     0% {
       transform: translateY(0);
     }
     
     33% {
-      transform: translateY(0%);
+      transform: translateY(150%);
     }
 
     66% {
-      transform: translateY(-660%);
+      transform: translateY(-560%);
     }
 
     100% {
@@ -141,19 +150,19 @@ body{
 @media screen and (max-width: 650px) {
   @keyframes h1 {
     0% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
 
     33% {
-      transform: translateY(60%);
+      transform: translateX(60%);
     }
 
     66% {
-      transform: translateY(-30%);
+      transform: translateX(-30%);
     }
 
     100% {
-      transform: translateY(0%);
+      transform: translateX(0%);
     }
   }
 
@@ -496,7 +505,7 @@ body{
 
 
 .modal-info > .bottom {
-  margin-top: 10%;
+  margin-bottom: 5%;
   white-space: nowrap;
 }
 
@@ -564,4 +573,91 @@ body{
   .gift-set-info > .gift-set-price {
     margin-left: 55%;
   }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 5rem;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.footer-div {
+  width: 90%;
+  margin: auto;
+}
+
+.table {
+  width: 100%;
+  border-bottom: 3px solid white;
+  padding: 3.5rem 0;
+}
+
+.table th {
+  width: 25%;
+}
+
+.table th {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+}
+
+td > a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.footer-div > h3 {
+  text-align: right;
+  margin-top: 3rem;
+}
+
+ul {
+  width: 97%;
+  text-align: right;
+  list-style: none;
+}
+
+ul > li {
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+
+ul > li > a {
+  color: white;
+  font-size: 2rem;
+}
+
+ul > li > a:hover {
+  color: pink;
+  transform: rotate(360deg);
+  transition: ease-in-out .5s;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-div > h3 {
+    text-align: center;
+  }
+
+  ul {
+    width: 100%;
+    text-align: center;
+    margin-left: -9%;
+  }
+}
+
+.footer-p {
+  margin-top: 10rem;
+}
+
+.footer-p > p {
+  display: block;
+  text-align: center;
+  font-size: 20px;
 }
