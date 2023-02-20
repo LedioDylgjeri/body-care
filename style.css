@@ -172,11 +172,27 @@ body{
   }
 }
 
-.stage>div>div {
+.stage > div > div {
   height: 100%;
   width: 25%;
   text-align: center;
   float: left;
+}
+
+.stage > div > div > p {
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 950px) {
+  .stage > div >div > p {
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  .stage>div>div>p {
+    font-size: 15px;
+  }
 }
 
 .div1 {
@@ -207,7 +223,7 @@ body{
 
 .intro-p {
   position: absolute;
-  width: 25%;
+  width: 40%;
   border: 4px solid white;
   padding: 1rem;
   top: 0;
@@ -219,7 +235,6 @@ body{
 
 .grid-parent {
   width: 90%;
-  height: 20rem;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -228,7 +243,7 @@ body{
 
 .grid-parent > .div1-img {
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   background-image: linear-gradient(40deg, rgba(244, 233, 132, 0.238),
   rgba(199, 92, 238, 0.308)), url(./images/intro_img1.jpg);
   background-position: 50% 50%;
@@ -250,5 +265,17 @@ body{
 .grid-parent > .div2-text {
   background: linear-gradient(40deg, #ed6ce46f, #f7f75a88);
   width: 100%;
+  height: 25rem;
   border: 2px solid rgba(218, 76, 243, 0.402);
+  color: rgb(109, 122, 26);
+}
+
+.grid-parent > .div2-text > h4, p {
+  width: 85%;
+  font-size: 1.5rem;
+  margin-left: 5%;
+}
+
+.grid-parent > .div2-text > h4 {
+  margin-top: 3rem;
 }
