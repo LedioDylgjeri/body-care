@@ -183,7 +183,7 @@ body{
 /* slide show */
 .stage {
   width: 100%;
-  height: 50px;
+  height: 3rem;
   margin-top: 1rem;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
@@ -224,11 +224,9 @@ body{
   width: 25%;
   text-align: center;
   float: left;
+  padding-top: .6rem;
 }
 
-.stage > div > div > p {
-  margin-top: 15px;
-}
 
 @media screen and (max-width: 950px) {
   .stage > div >div > p {
@@ -290,11 +288,11 @@ body{
   width: 90%;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-gap: 10%;
 }
 
-.grid-parent > .div1-img {
+.grid-parent > .grid-child-img {
   width: 100%;
   height: 23rem;
   background-image: linear-gradient(40deg, rgba(244, 233, 132, 0.238),
@@ -304,16 +302,15 @@ body{
   border: 2px solid rgba(243, 243, 54, 0.639);
 }
 
-.div1-img > p {
-  border: 2px solid rgba(255, 255, 0, 0.682);
+.grid-child-img > .img-text {
+  border: 2px solid rgba(212, 227, 83, 0.682);
   color: rgba(255, 255, 255, 0.89);
-  width: 60%;
   text-align: center;
-  padding: 1rem;
-  margin-top: 10%;
-  margin-left: 5%;
+  padding: 2rem;
+  margin: 8% 8%;
+  width: 50%;
+  display: block;
 }
-
 
 .grid-parent > .div2-text {
   background: linear-gradient(40deg, #ed6ce46f, #f7f75a88);
@@ -326,20 +323,25 @@ body{
 .grid-parent > .div2-text > h4, p {
   width: 85%;
   font-size: 1.5rem;
+  text-align: left;
   margin-left: 5%;
 }
 
 .grid-parent > .div2-text > h4 {
   margin-top: 3rem;
+
+}
+.grid-parent > .div2-text > p {
+  display: block;
 }
 
 .lotion-title {
+  height: 2rem;
   border-bottom: 2px solid rgb(109, 122, 26);
-  padding-bottom: 1rem;
   margin-top: 10%;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   .lotion-title {
     margin-top: 10rem;
   }
@@ -351,8 +353,7 @@ body{
 
 .item-parent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  border: 2px solid red;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .item-parent > div > img {
@@ -360,10 +361,13 @@ body{
 }
 
 .item {
-  border: 2px solid purple;
   display: grid;
   justify-content: center;
   align-content: center;
+  text-align: center;
+}
+
+.item > span {
   text-align: center;
 }
 
@@ -388,6 +392,7 @@ body{
   color: white;
   font-weight: bolder;
   font-size: 20px;
+  text-align: center;
   text-decoration: none;
   border-radius: 15px;
   box-shadow: 3px 3px 0 0 rgba(250, 247, 247, 0.626);
@@ -407,7 +412,7 @@ body{
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(167, 169, 172, 0.633);
+  background-color: rgba(248, 233, 170, 0.37);
   opacity: 0;
   pointer-events: none;
 }
@@ -419,11 +424,10 @@ body{
 
 .item-md {
   position: relative;
-  background: rgba(237, 138, 72, 0.995);
+  background: white;
   margin: auto;
-  border: 2px solid white;
   width: 50%;
-  padding: .5rem .5rem 2rem .5rem;
+  height: 36rem;
   margin-top: 5rem;
 }
 
@@ -436,7 +440,7 @@ body{
 .item-md > p {
   text-align: left;
   margin-left: 0;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid silver;
   padding-bottom: 1rem;
   width: 80%;
 }
@@ -448,9 +452,15 @@ body{
   text-align: right;
   text-decoration: none;
   width: 2%;
-  padding: 5px;
-  font-size: 20px;
-  background-color: gray;
+  padding: 1%;
+  font-size: 1em;
+  background-color: silver;
+}
+
+.item-md > a:hover {
+  transform: rotate(360deg);
+  transition: ease-in-out .4s;
+  background-color: red;
   color: white;
 }
 
@@ -462,9 +472,6 @@ body{
   width: 80%;
   margin: 0 auto;
   height: 20rem;
-  /* display: grid;
-  grid-template-columns: repeat(2, 1fr); */
-  border: 2px solid white;
 }
 
 .modal-info > img, p {
@@ -478,9 +485,8 @@ body{
 }
 
 .modal-info > img {
-  height: 75%;
+  height: 85%;
   width: 45%;
-  margin-top: 4%;
   float: left;
 }
 
@@ -498,4 +504,64 @@ body{
   .modal-info>.price, .bottom {
       margin-left: 45%;
     }
+}
+
+.modal-btm {
+  background: silver;
+  padding: 1em;
+  height: auto;
+  margin-top: -6%;
+  margin-bottom: 3rem;
+}
+
+.modal-btm > p, a {
+  display: block;
+  width: 85%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.modal-btm > p {
+  border-bottom: 3px solid white;
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  font-size: 1.2em;
+}
+
+.modal-btm > a {
+  text-decoration: none;
+  background-color: white;
+  width: 11rem;
+  padding: 10px;
+  text-align: center;
+  margin-left: 7.5%;
+  color: black;
+}
+
+.modal-btm > a:hover {
+  background-color: rgba(133, 27, 133, 0.65);
+  color: white;
+  box-shadow: 0 0 3px 3px rgb(200, 105, 238);
+  transition: ease-in-out .2s;
+}
+
+.gift-set {
+  height: 40rem;
+}
+
+.gift-set-info > img {
+  padding: 1rem;
+  height: 70%;
+}
+
+@media screen and (max-width: 950px) {
+  .item-md {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .gift-set-info > .gift-set-price {
+    margin-left: 55%;
+  }
 }
