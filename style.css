@@ -290,7 +290,7 @@ body{
   width: 90%;
   margin: 2rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: 10%;
 }
 
@@ -341,4 +341,35 @@ body{
 
 .lotion-title-text {
   margin-left: 1rem;
+}
+
+.item-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  border: 2px solid red;
+}
+
+.item-parent > div > img {
+  height: 80%;
+}
+
+.item {
+  border: 2px solid purple;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.item > h4 {
+  color: rgb(109, 122, 26);
+  margin-top: -20%;
+}
+
+.item > h3 {
+  margin-top: -10%;
+}
+
+.item > span, a {
+  margin-bottom: 5%;
 }
