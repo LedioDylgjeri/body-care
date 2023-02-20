@@ -96,7 +96,7 @@ body{
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 650px){
   @keyframes h1 {
       0% {
         transform: translateY(0);
@@ -114,7 +114,24 @@ body{
         transform: translateY(0%);
       }
     }
-}
+  @keyframes h4 {
+    0% {
+      transform: translateY(0);
+    }
+    
+      33% {
+        transform: translateY(0%);
+      }
+  
+      66% {
+        transform: translateY(-660%);
+      }
+  
+      100% {
+        transform: translateY(0%);
+      }
+  }
+}  
 
 /* slide show */
 .stage {
@@ -178,8 +195,60 @@ body{
   background-color: rgba(201, 156, 5, 0.9);
 }
 
+.intro-div {
+  position: relative;
+}
+
 .intro-img {
   width: 100%;
   height: 60rem;
   border-radius: 0 0 10px 10px;
+}
+
+.intro-p {
+  position: absolute;
+  width: 25%;
+  border: 4px solid white;
+  padding: 1rem;
+  top: 0;
+  background-color: silver;
+  margin-top: 18rem;
+  margin-left: 3rem;
+  font-weight: bolder;
+}
+
+.grid-parent {
+  width: 90%;
+  height: 20rem;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 10%;
+}
+
+.grid-parent > .div1-img {
+  width: 100%;
+  height: 30rem;
+  background-image: linear-gradient(40deg, rgba(244, 233, 132, 0.238),
+  rgba(199, 92, 238, 0.308)), url(./images/intro_img1.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 2px solid rgba(243, 243, 54, 0.639);
+}
+
+.div1-img > p {
+  border: 2px solid rgba(255, 255, 0, 0.682);
+  color: rgba(255, 255, 255, 0.89);
+  width: 60%;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+
+.grid-parent > .div2-text {
+  background: linear-gradient(40deg, #ed6ce46f, #f7f75a88);
+  width: 100%;
+  border: 2px solid rgba(218, 76, 243, 0.402);
 }
