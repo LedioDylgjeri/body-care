@@ -47,12 +47,13 @@ body{
 }
 
 .title h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: rgb(109, 122, 26);
   transform: translateY(100%);
   animation: h1;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  font-family: 'Tangerine', cursive;
 }
 
 .title h4 {
@@ -68,7 +69,7 @@ body{
     transform: translateY(0);
   }
   33% {
-    transform: translateY(150%);
+    transform: translateY(100%);
   }
   66% {
     transform: translateY(-50%);
@@ -96,7 +97,7 @@ body{
   }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 750px){
   @keyframes h1 {
       0% {
         transform: translateY(0);
@@ -119,19 +120,65 @@ body{
       transform: translateY(0);
     }
     
-      33% {
-        transform: translateY(0%);
-      }
-  
-      66% {
-        transform: translateY(-660%);
-      }
-  
-      100% {
-        transform: translateY(0%);
-      }
+    33% {
+      transform: translateY(0%);
+    }
+
+    66% {
+      transform: translateY(-660%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .logo {
+    margin: 0 auto;
   }
 }  
+
+@media screen and (max-width: 650px) {
+  @keyframes h1 {
+    0% {
+      transform: translateY(0);
+    }
+
+    33% {
+      transform: translateY(60%);
+    }
+
+    66% {
+      transform: translateY(-30%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes h4 {
+    0% {
+      transform: translateY(0);
+    }
+
+    33% {
+      transform: translateY(150%);
+    }
+
+    66% {
+      transform: translateY(-660%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  .stage {
+    margin-top: 5rem;
+  }
+}
 
 /* slide show */
 .stage {
@@ -190,8 +237,14 @@ body{
 }
 
 @media screen and (max-width: 800px) {
-  .stage>div>div>p {
+  .stage > div > div > p {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .stage {
+    margin-top: 5rem;
   }
 }
 
@@ -278,4 +331,14 @@ body{
 
 .grid-parent > .div2-text > h4 {
   margin-top: 3rem;
+}
+
+.lotion-title {
+  border-bottom: 2px solid rgb(109, 122, 26);
+  padding-bottom: 1rem;
+  margin-top: 10%;
+}
+
+.lotion-title-text {
+  margin-left: 1rem;
 }
