@@ -449,7 +449,7 @@ body{
 .item-md > p {
   text-align: left;
   margin-left: 0;
-  border-bottom: 3px solid silver;
+  border-bottom: 3px solid rgb(192, 192, 192);
   padding-bottom: 1rem;
   width: 80%;
 }
@@ -463,7 +463,7 @@ body{
   width: 2%;
   padding: 1%;
   font-size: 1em;
-  background-color: silver;
+  background-color: rgba(192, 192, 192, 0.751);
 }
 
 .item-md > a:hover {
@@ -516,7 +516,7 @@ body{
 }
 
 .modal-btm {
-  background: silver;
+  background: rgba(192, 192, 192, 0.753);
   padding: 1em;
   height: auto;
   margin-top: -6%;
